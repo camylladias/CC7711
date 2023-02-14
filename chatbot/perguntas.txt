@@ -1,0 +1,4 @@
+I.Saudações
+II.Despedidas
+III.Perguntar sobre dias de provas de todas as disciplinas
+IV.Marcar revisão de prova caso a nota seja menor do que 5
