@@ -1,3 +1,6 @@
+Ciência da Computação FEI
+Disciplina CC7711 - INTELIGENCIA ARTIFICIAL E ROBOTICA
+
 Atividade #1 – Chatbot
 Você foi designado para criar um chatbot que ajuda o professor de TCC I e para isso, o MVP
 deve auxiliar um usuário com suas dúvidas em relação aula de introdução da disciplina 
