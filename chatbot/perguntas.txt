@@ -3,4 +3,4 @@ II.Despedidas
 III.Mostrar tema de TCC dos grupos
 IV.Mostrar agenda de apresentação dos grupos
 
-https://prod.liveshare.vsengsaas.visualstudio.com/join?5A545A0887562C85B430656E8906CC9B6F5F
+
