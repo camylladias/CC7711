@@ -11,10 +11,9 @@ import pickle
 import nltk
 from nltk.stem import WordNetLemmatizer
 
-from keras.models import Sequential
-from keras.layers import Dense, Activation, Dropout
-from tensorflow.keras.optimizers import SGD
-
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense, Activation, Dropout
+from tensorflow.keras.optimizers.legacy import SGD
 
 import random
 
@@ -24,6 +23,7 @@ class ChatBot:
     documents = []
     intents = []
     model = []
+    
     ignore_words = ['?', '!']
     lemmatizer = WordNetLemmatizer()
 
@@ -151,6 +151,23 @@ class ChatBot:
         ########## print(return_list)
         return return_list
 
+    def SugestOptions(self,intencao):
+        resp=None
+        redirecionamento_sugestoes={"tema_tcc":"Opções de tema","orientador_tcc":"Por que preciso de um orientador"}
+        get_intention=(str(intencao).replace('{',"").replace('}',"").replace("[","").replace("'","").replace('"',"").replace("]","").split(","))
+        if "tema_tcc" in get_intention[0]:
+            int_sugerida=self.predict_class(redirecionamento_sugestoes["tema_tcc"], self.model)
+            resp = self.getResponse(int_sugerida, self.intents)
+            aux=resp
+            resp="Voce pode se interessar pelo seguinte tema: "+ resp
+        if "orientador_tcc" in get_intention[0]:
+            int_sugerida=self.predict_class(redirecionamento_sugestoes["orientador_tcc"], self.model)
+            resp = self.getResponse(int_sugerida, self.intents)
+            aux=resp
+            resp="Esteja ciente de que: "+ resp
+        return resp,int_sugerida
+        
+
     def getResponse(self, ints, intents_json):
         tag = ints[0]['intent']
         list_of_intents = intents_json['intents']
@@ -164,4 +181,6 @@ class ChatBot:
     def chatbot_response(self, msg):
         ints = self.predict_class(msg, self.model)
         res = self.getResponse(ints, self.intents)
-        return res, ints
+        redirect_msg=self.SugestOptions(ints)[0]
+        int_sugerida=self.SugestOptions(ints)[1]
+        return res, ints,redirect_msg,int_sugerida
