@@ -6,6 +6,8 @@ Você foi designado para criar um chatbot que ajuda o professor de TCC I e para 
 
 ## 1. Inicialização do código
 
+Instale o [Python](https://www.python.org/downloads/)
+
 Para evitar problemas de versionamento, dentro da pasta ``CC7711`` crie o ambiente virtual:
 
     python -m venv venv
@@ -14,17 +16,17 @@ Em seguida, ative o ambiente virtual:
 
     .\venv\Scripts\activate
 
-Instale o [Python 3](https://www.python.org/downloads/), dentro da pasta ``chatbot`` instale os pacotes do arquivo *pacotes.txt*:
+Dentro da pasta ``chatbot`` instale os pacotes do arquivo *pacotes.txt*:
 
     pip install -r pacotes.txt
     
 Inicie a interação com o chatbot em modo *createModel* (-c) para treinar o modelo:
 
-    python3 main2.py -c
+    python main2.py -c
     
 Em seguida, entre com CRTL+C e inicie o chatbot em modo *loadModel* (-l) para carregar o modelo:
 
-    python3 main2.py -l
+    python main2.py -l
 
 ## 2. Intenções
 Arquivo *intents.json*:
