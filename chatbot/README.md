@@ -19,8 +19,7 @@ Inicie a interação com o chatbot:
     python main.py
     
 Para treinar seu modelo, no arquivo main.py comente a linha myChatBot.loadModel() e descomente a linha myChatBot.createModel(), digite o comando: python main.py
-e espere o treinamento finalizar.
-Digite Ctrl+C para matar a execução do processo
+e espere o treinamento finalizar. Entre com Ctrl+C para finalizar a execução do processo.
 
 Volte no arquivo main.py comente a linha myChatBot.createModel() e descomente a linha myChatBot.loadModel(), digite o comando: python main.py
 
