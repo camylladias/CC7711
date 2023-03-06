@@ -1,19 +1,19 @@
 from chatbot import ChatBot
 myChatBot = ChatBot()
 #apenas carregar um modelo pronto
-#myChatBot.loadModel()
+myChatBot.loadModel()
 
 #criar o modelo
-myChatBot.createModel()
+#myChatBot.createModel()
 
-print("Bem vindo ao Chatbot")
+print("\n \n === Bem vindo ao Chatbot === \n")
 
-pergunta = input("como posso te ajudar?")
+pergunta = input("[bot] Como posso te ajudar? :) \n")
 tamanho=len(myChatBot.chatbot_response(pergunta))
 if tamanho > 2:
     resposta, intencao, sugestao,intecao_sug = myChatBot.chatbot_response(pergunta)
     print(resposta + "   ["+intencao[0]['intent']+"] \n")
-    print("Deixe-me sugerir um tópico \n")
+    print("[bot] Deixe-me sugerir um tópico \n")
     print(sugestao + "   ["+intecao_sug[0]['intent']+"] \n")
 else:
     resposta, intencao = myChatBot.chatbot_response(pergunta)
@@ -21,12 +21,12 @@ else:
 
 
 while (intencao[0]['intent']!="despedida"):
-    pergunta = input("posso lhe ajudar com algo a mais?")
+    pergunta = input("[bot] Posso lhe ajudar com algo mais?")
     tamanho=len(myChatBot.chatbot_response(pergunta))
     if tamanho > 2:
         resposta, intencao, sugestao,intecao_sug = myChatBot.chatbot_response(pergunta)
         print(resposta + "   ["+intencao[0]['intent']+"] \n")
-        print("Deixe-me sugerir um tópico \n")
+        print("[bot] Deixe-me sugerir um tópico \n")
         print(sugestao + "   ["+intecao_sug[0]['intent']+"] \n")
     else:
         resposta, intencao = myChatBot.chatbot_response(pergunta)
@@ -34,4 +34,4 @@ while (intencao[0]['intent']!="despedida"):
 
 
 
-print("Foi um prazer atendê-lo")
+print("[bot] Foi um prazer atendê-lo!")
