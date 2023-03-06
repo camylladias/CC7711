@@ -16,7 +16,7 @@ Instale o Python 3 e os pacotes do arquivo *pacotes.txt*:
     pip install -r pacotes.txt
 Inicie a interação com o chatbot:
 
-    python3 main.py -t
+    python3 main.py
 
 ## 2. Intenções
 Arquivo *intents.json*:
