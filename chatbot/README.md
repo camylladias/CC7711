@@ -160,5 +160,5 @@ Temos como *patterns*, por exemplo, "tchau", "tks" e como *responses* "Até brev
 
 ## 4. Vídeo
 
-
+https://user-images.githubusercontent.com/37374749/223206125-1f1a43a6-b837-4086-bed2-8eeeec1696b0.mp4
 ###### [Atividade 1 - ChatBot (CC7711 - FEI) - YouTube](https://www.youtube.com/watch?v=Eph6xjY803s)
