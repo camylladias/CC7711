@@ -36,8 +36,17 @@ Inicie a interação com o chatbot em modo *createModel* (-c) para treinar o mod
 Em seguida, entre com CRTL+C e inicie o chatbot em modo *loadModel* (-l) para carregar o modelo:
 
     python main2.py -l
+    
+## 2. Exemplo de Interação
+![img1.png](https://github.com/camylladias/CC7711/blob/main/chatbot/arquivos/img1.png?raw=true)
 
-## 2. Intenções
+## 3. Vídeo
+
+https://user-images.githubusercontent.com/37374749/223206125-1f1a43a6-b837-4086-bed2-8eeeec1696b0.mp4
+###### [Atividade 1 - ChatBot (CC7711 - FEI) - YouTube](https://www.youtube.com/watch?v=Eph6xjY803s)
+
+
+## 4. Intenções
 Arquivo *intents.json*:
 ``` {"intents":[
 
@@ -137,7 +146,7 @@ Arquivo *intents.json*:
 }]
 }
 ```
-## 3. Descrição das Intenções
+## 5. Descrição das Intenções
 *Descrição das Tags, Patterns e Responses*
 
 **saudacao**: tag de cumprimento onde pode ser o início da interação com o chatbot.
@@ -165,11 +174,3 @@ Temos como *patterns*, por exemplo, "tchau", "tks" e como *responses* "Até brev
 **data_tcc**: Essa tag é utilizada para responder ao usuário uma data *aproximada* da apresentação do tcc.
 
 **divergencia_tcc**: Essa tag utiliza os *patterns* "Entre meu professor de TCC e meu orientador, quem tem a decisão final?", "Se meu orientador e professor discordam quem eu sigo?" para ajudar o usuário a entender como tratar de divergências entre as opiniões do professor de tcc e do orientador do tcc.
-
-## 3. Exemplo de Interação
-![img1.png](https://github.com/camylladias/CC7711/blob/main/chatbot/arquivos/img1.png?raw=true)
-
-## 4. Vídeo
-
-https://user-images.githubusercontent.com/37374749/223206125-1f1a43a6-b837-4086-bed2-8eeeec1696b0.mp4
-###### [Atividade 1 - ChatBot (CC7711 - FEI) - YouTube](https://www.youtube.com/watch?v=Eph6xjY803s)
