@@ -6,74 +6,124 @@ Você foi designado para criar um chatbot que ajuda o professor de TCC I e para 
 
 ## 1. Inicialização do código
 
-Para evitar problemas de versionamento, dentro da pasta CC7711 rode:
-``python -m venv venv``
+Para evitar problemas de versionamento, dentro da pasta ``CC7711`` crie o ambiente virtual:
 
-Em seguida, entre na pasta  ``venv``, ``cd Scripts``, rode ``.\activate``, volte para a pasta raiz ``CC7711`` e entre na pasta ``chatbot``
+    python -m venv venv
 
-Instale o Python 3 e os pacotes do arquivo *pacotes.txt*:
+Em seguida, ative o ambiente virtual:
+
+    .\venv\Scripts\activate
+
+Instale o [Python 3](https://www.python.org/downloads/), dentro da pasta ``chatbot`` instale os pacotes do arquivo *pacotes.txt*:
 
     pip install -r pacotes.txt
-Inicie a interação com o chatbot:
-
-    python main.py
     
-Para treinar seu modelo, no arquivo main.py comente a linha myChatBot.loadModel() e descomente a linha myChatBot.createModel(), digite o comando: python main.py
-e espere o treinamento finalizar. Entre com Ctrl+C para finalizar a execução do processo.
+Inicie a interação com o chatbot em modo *createModel* (-c) para treinar o modelo:
 
-Volte no arquivo main.py comente a linha myChatBot.createModel() e descomente a linha myChatBot.loadModel(), digite o comando: python main.py
+    python3 main2.py -c
+    
+Em seguida, entre com CRTL+C e inicie o chatbot em modo *loadModel* (-l) para carregar o modelo:
+
+    python3 main2.py -l
 
 ## 2. Intenções
 Arquivo *intents.json*:
 ``` {"intents":[
-  { "tag": "saudacao",
-    "patterns":["Ola","Opa","Oi", "tudo bem"],
-    "responses": ["Oi","Ola", "Oie, espero que esteja bem!"]
-  },
-  { "tag": "despedida",
-    "patterns":["valeu","tchau","Obrigado","tks"],
-    "responses": ["Ate breve","Falou", "Tchauzinho!"]
-  },
-  { "tag": "introducao_tcc",
-    "patterns":["Como eh um tcc?","Por que fazer o tcc?"],
-    "responses": ["O TCC eh  uma avaliacao que acontece quando a graduacao esta chegando ao fim. Ele tem o objetivo de fazer com que o aluno coloque no papel tudo o que aprendeu até o momento, desde o inicio dos estudos. Assim, eh possivel saber se tudo foi absorvido e entendido corretamente."]
-  },
-  { "tag": "tema_tcc",
-    "patterns":["Tema","Como escolher o tema?", "Tema ciencia da computacao"],
-    "responses": ["O tema de uma monografia deve ser o mais especifico possivel, nao pode ser um assunto muito aberto. Um assunto unico e especifico possibilita um melhor aprofundamento e faz com que os leitores do TCC, principalmente a banca examinadora, criem as expectativas corretas, sabendo exatamente o que sera abordado na pesquisa."]
-  },
-  { "tag": "opcao_tema_tcc",
-    "patterns":["Tema ciencia da computacao", "Opcoes de tema"],
-    "responses": ["Criacao de ChatBot para avaliacao do estado mental dos funcionarios do Metro de SP", "Como podemos anonimizar automaticamente as imagens das pessoas em gravacoes de video", "Deteccao de fraudes em cartoes de credito com aprendizado de maquina", "Analise de sentimentos em redes sociais"]
-  },
-  { "tag": "integrantes_tcc",
-  "patterns":["Grupo","Com quantas pessoas posso fazer tcc?", "Quantidade de integrantes", "Posso fazer grupo de um?", "Posso fazer grupo com pessoas de outro curso?", "Posso fazer sozinho?"],
-  "responses": ["Eh recomendado o grupo de TCC ter 4 pessoas, mas pode-se fazer com menos pessoas, tendo em vista que ainda sera esperado um trabalho digno de quatro \n integrantes, ou mais pessoas, mas tendo mais pessoas sera esperado que o trabalho reflita essa diferenca. "]
-  },
-  { "tag": "banca_tcc",
-  "patterns":["Quem avalia?","Quantos avaliadores?", "Como eh a banca?", "Banca"],
-  "responses": ["Sao 3 avaliadores."]
-  },
-  { "tag": "orientador_tcc",
-  "patterns":["Quem pode ser meu orientador?","Como escolho um orientador?", "Meu orientador pode ser de outro curso?"],
-  "responses": ["Seu orientador pode ser qualquer professor da FEI de qualquer curso. E interessante que seja alguem com quem tenha uma boa relacao e em quem confie.\n Alem disso eh importante que a area de seu tema seja algo com que ele ou ela esteja familiarizado."]
-  },
-  { "tag": "funcao_orientador_tcc",
-  "patterns":["Por que preciso de um orientador","Qual a funcao de um orientador?", "Para que preciso de um orientador?"],
-  "responses": ["O orientador eh quem vai acompanhar o projeto de perto e guia-los durante o processo, orientado quanto a qualidade do seu trabalho, qual o proximo passo e ajudar na tomada de decisoes. "]
-  },
-  { "tag": "apresentacao_tcc",
-  "patterns":["Quem pode ver minha apresentacao?", "minha familia pode vir", "posso trazer meu namorado","posso trazer minha namorada","pode vir gente de fora"],
-  "responses": ["Qualquer pessoa pode assistir sua apresentacao", "Pode vir todo mundo!"]
-  },
-  { "tag": "data_tcc",
-  "patterns":["Qual a data final?", "Que dia devo apresentar meu tcc?", "Qual horario de apresentacao?"],
-  "responses": ["Usualmente a data de avaliacao eh no fim do semestre durante a epoca da P3."]
-  },
-  { "tag": "divergencia_tcc",
-    "patterns":["Entre meu professor de TCC e meu orientador, quem tem a decisao final?","Se meu orientador e professor discordam quem eu sigo?"],
-    "responses": ["No caso do seu professor de TCC e orientador terem opinioes distintas, siga seu orientador, \n ele tem uma visao mais aprofundada de seu projeto e pode dar instrucoes mais precisas.\n Entretanto vale a pena pedir para seu orientador conversar com seu professor!"]
-  }]
+
+{ "tag": "saudacao",
+
+"patterns":["Ola","Opa","Oi", "tudo bem"],
+
+"responses": ["Oi","Olá", "Oie, espero que esteja bem!"]
+
+},
+
+{ "tag": "despedida",
+
+"patterns":["valeu","tchau","Obrigado","tks"],
+
+"responses": ["Até breve","Falou", "Tchauzinho!"]
+
+},
+
+{ "tag": "introducao_tcc",
+
+"patterns":["Como é um tcc?","Por que fazer o tcc?"],
+
+"responses": ["O TCC é uma avaliação que acontece quando a graduação está chegando ao fim. Ele tem o objetivo de fazer com que o aluno coloque no papel tudo o que aprendeu até o momento, desde o início dos estudos. Assim, é possível saber se tudo foi absorvido e entendido corretamente."]
+
+},
+
+{ "tag": "tema_tcc",
+
+"patterns":["Tema","Como escolher o tema?", "Tema ciência da computação"],
+
+"responses": ["O tema de uma monografia deve ser o mais específico possível, não pode ser um assunto muito aberto. Um assunto único e específico possibilita um melhor aprofundamento e faz com que os leitores do TCC, principalmente a banca examinadora, criem as expectativas corretas, sabendo exatamente o que será abordado na pesquisa."]
+
+},
+
+{ "tag": "opcao_tema_tcc",
+
+"patterns":["Tema ciência da computação", "Opções de tema"],
+
+"responses": ["Criação de ChatBot para avaliação do estado mental dos funcionários do Metrô de SP", "Como podemos anonimizar automaticamente as imagens das pessoas em gravações de vídeo", "Detecção de fraudes em cartões de crédito com aprendizado de máquina", "Análise de sentimentos em redes sociais"]
+
+},
+
+{ "tag": "integrantes_tcc",
+
+"patterns":["Grupo","Com quantas pessoas posso fazer tcc?", "Quantidade de integrantes", "Posso fazer grupo de um?", "Posso fazer grupo com pessoas de outro curso?", "Posso fazer sozinho?"],
+
+"responses": ["É recomendado o grupo de TCC ter 4 pessoas, mas pode-se fazer com menos pessoas, tendo em vista que ainda será esperado um trabalho digno de quatro \n integrantes, ou mais pessoas, mas tendo mais pessoas será esperado que o trabalho reflita essa diferença. "]
+
+},
+
+{ "tag": "banca_tcc",
+
+"patterns":["Quem avalia?","Quantos avaliadores?", "Como é a banca?", "Banca"],
+
+"responses": ["São 3 avaliadores."]
+
+},
+
+{ "tag": "orientador_tcc",
+
+"patterns":["Quem pode ser meu orientador?","Como escolho um orientador?", "Meu orientador pode ser de outro curso?"],
+
+"responses": ["Seu orientador pode ser qualquer professor da FEI de qualquer curso. E interessante que seja alguém com quem tenha uma boa relação e em quem confie.\n Além disso é importante que a área de seu tema seja algo com que ele ou ela esteja familiarizado."]
+
+},
+
+{ "tag": "funcao_orientador_tcc",
+
+"patterns":["Por que preciso de um orientador","Qual a função de um orientador?", "Para que preciso de um orientador?"],
+
+"responses": ["O orientador é quem vai acompanhar o projeto de perto e guia-los durante o processo, orientado quanto a qualidade do seu trabalho, qual o próximo passo e ajudar na tomada de decisões. "]
+
+},
+
+{ "tag": "apresentacao_tcc",
+
+"patterns":["Quem pode ver minha apresentação?", "minha família pode vir", "posso trazer meu namorado","posso trazer minha namorada","pode vir gente de fora"],
+
+"responses": ["Qualquer pessoa pode assistir sua apresentação", "Pode vir todo mundo, queride! Boa sorte amore s2"]
+
+},
+
+{ "tag": "data_tcc",
+
+"patterns":["Qual a data final?", "Que dia devo apresentar meu tcc?", "Qual horário de apresentação?"],
+
+"responses": ["Usualmente a data de avaliação é no fim do semestre durante a época da P3."]
+
+},
+
+{ "tag": "divergencia_tcc",
+
+"patterns":["Entre meu professor de TCC e meu orientador, quem tem a decisão final?","Se meu orientador e professor discordam quem eu sigo?"],
+
+"responses": ["No caso do seu professor de TCC e orientador terem opiniões distintas, siga seu orientador, \n ele tem uma visão mais aprofundada de seu projeto e pode dar instruções mais precisas.\n Entretanto vale a pena pedir para seu orientador conversar com seu professor!"]
+}]
 }
 ```
 ## 3. Descrição das Intenções
@@ -106,6 +156,9 @@ Temos como *patterns*, por exemplo, "tchau", "tks" e como *responses* "Até brev
 **divergencia_tcc**: Essa tag utiliza os *patterns* "Entre meu professor de TCC e meu orientador, quem tem a decisão final?", "Se meu orientador e professor discordam quem eu sigo?" para ajudar o usuário a entender como tratar de divergências entre as opiniões do professor de tcc e do orientador do tcc.
 
 ## 3. Exemplo de Interação
-
+![img1.png](https://github.com/camylladias/CC7711/blob/main/chatbot/img/img1.png?raw=true)
 
 ## 4. Vídeo
+
+
+###### [Atividade 1 - ChatBot (CC7711 - FEI) - YouTube](https://www.youtube.com/watch?v=Eph6xjY803s)
