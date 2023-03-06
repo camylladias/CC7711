@@ -2,7 +2,16 @@
 ##### Disciplina Inteligência Artificial e Robótica - Ciência da Computação FEI
 
 Atividade #1 – Chatbot 
-Você foi designado para criar um chatbot que ajuda o professor de TCC I e para isso, o MVP deve auxiliar um usuário com suas dúvidas em relação aula de introdução da disciplina
+Você foi designado para criar um chatbot que ajuda o professor de TCC I e para isso, o MVP deve auxiliar um usuário com suas dúvidas em relação aula de introdução da disciplina.
+
+##  0. Integrantes
+
+<div align="center">
+
+| <img src="https://avatars.githubusercontent.com/evesantana" alt="Evelyn" width="50"/> | <img src="https://avatars.githubusercontent.com/camylladias" alt="Camylla" width="50"/> | <img src="https://avatars.githubusercontent.com/patriciamed" alt="Patricia" width="50" width="50"/>
+|:------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------:|
+| [Evelyn Santanna](https://github.com/evesantana)| [Camylla Dias](https://github.com/camylladias)| [Patrícia Medeiros](https://github.com/patriciamed)                          
+</div>
 
 ## 1. Inicialização do código
 
