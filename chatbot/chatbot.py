@@ -8,8 +8,8 @@ import numpy as np
 import json
 import pickle
 
-from nltk.stem import WordNetLemmatizer
 import nltk
+from nltk.stem import WordNetLemmatizer
 
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Activation, Dropout
