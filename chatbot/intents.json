@@ -1,3 +1,4 @@
+
 {"intents":[
   { "tag": "saudacao",
     "patterns":["Ola","Opa","Oi", "tudo bem"],

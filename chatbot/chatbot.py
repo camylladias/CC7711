@@ -112,7 +112,7 @@ class ChatBot:
     def loadModel(self):
         from keras.models import load_model
         self.model = load_model('chatbot_model.h5')
-        self.intents = json.loads(open('intents.json').read())
+        self.intents = json.loads(open('intents.json').read(),)
         self.words = pickle.load(open('words.pkl', 'rb'))
         self.classes = pickle.load(open('classes.pkl', 'rb'))
 
@@ -153,19 +153,21 @@ class ChatBot:
 
     def SugestOptions(self,intencao):
         resp=None
+        int_sugerida=None
         redirecionamento_sugestoes={"tema_tcc":"Opções de tema","orientador_tcc":"Por que preciso de um orientador"}
         get_intention=(str(intencao).replace('{',"").replace('}',"").replace("[","").replace("'","").replace('"',"").replace("]","").split(","))
         if "tema_tcc" in get_intention[0]:
             int_sugerida=self.predict_class(redirecionamento_sugestoes["tema_tcc"], self.model)
             resp = self.getResponse(int_sugerida, self.intents)
             aux=resp
-            resp="Voce pode se interessar pelo seguinte tema: "+ resp
+            resp="Você pode se interessar pelo seguinte tema: "+ resp
+            return resp,int_sugerida
         if "orientador_tcc" in get_intention[0]:
             int_sugerida=self.predict_class(redirecionamento_sugestoes["orientador_tcc"], self.model)
             resp = self.getResponse(int_sugerida, self.intents)
             aux=resp
             resp="Esteja ciente de que: "+ resp
-        return resp,int_sugerida
+            return resp,int_sugerida
         
 
     def getResponse(self, ints, intents_json):
@@ -181,6 +183,8 @@ class ChatBot:
     def chatbot_response(self, msg):
         ints = self.predict_class(msg, self.model)
         res = self.getResponse(ints, self.intents)
-        redirect_msg=self.SugestOptions(ints)[0]
-        int_sugerida=self.SugestOptions(ints)[1]
-        return res, ints,redirect_msg,int_sugerida
+        if self.SugestOptions(ints) != None:
+            redirect_msg=self.SugestOptions(ints)[0]
+            int_sugerida=self.SugestOptions(ints)[1]
+            return res, ints,redirect_msg,int_sugerida
+        return res, ints
