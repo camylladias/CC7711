@@ -5,6 +5,12 @@ Atividade #1 – Chatbot
 Você foi designado para criar um chatbot que ajuda o professor de TCC I e para isso, o MVP deve auxiliar um usuário com suas dúvidas em relação aula de introdução da disciplina
 
 ## 1. Inicialização do código
+
+Para evitar problemas de versionamento, dentro da pasta CC7711 rode:
+``python -m venv venv``
+
+Em seguida, entre na pasta  ``venv``, ``cd Scripts``, rode ``.\activate``, volte para a pasta raiz ``CC7711`` e entre na pasta ``chatbot``
+
 Instale o Python 3 e os pacotes do arquivo *pacotes.txt*:
 
     pip install -r pacotes.txt
