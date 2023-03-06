@@ -8,7 +8,6 @@ import numpy as np
 import json
 import pickle
 
-import nltk
 from nltk.stem import WordNetLemmatizer
 
 from tensorflow.keras.models import Sequential
