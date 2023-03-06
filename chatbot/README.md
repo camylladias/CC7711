@@ -156,7 +156,7 @@ Temos como *patterns*, por exemplo, "tchau", "tks" e como *responses* "Até brev
 **divergencia_tcc**: Essa tag utiliza os *patterns* "Entre meu professor de TCC e meu orientador, quem tem a decisão final?", "Se meu orientador e professor discordam quem eu sigo?" para ajudar o usuário a entender como tratar de divergências entre as opiniões do professor de tcc e do orientador do tcc.
 
 ## 3. Exemplo de Interação
-![img1.png](https://github.com/camylladias/CC7711/blob/main/chatbot/img/img1.png?raw=true)
+![img1.png](https://github.com/camylladias/CC7711/blob/main/chatbot/arquivos/img1.png?raw=true)
 
 ## 4. Vídeo
 
