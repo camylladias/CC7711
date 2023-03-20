@@ -1,4 +1,4 @@
-# Árvore de Decisão - Atividade 2
+# Árvore de Decisão - Atividade 3
 ##### Disciplina Inteligência Artificial e Robótica - Ciência da Computação FEI
 
 ## Base de Dados
