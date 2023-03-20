@@ -30,7 +30,7 @@ As Árvores de Decisão são um método de aprendizado supervisionado não param
 ## Matriz de Confusão
 Matriz de confusão é uma medida de desempenho para classificação de aprendizado de máquina. É extremamente útil para medir Recall, Precisão, Especificidade, Exatidão e curvas AUC-ROC.
 
-Ao obter uma entropia de *0.0* nos resultados finais da árvore de decisão, a matriz de confusão formada trás precisão nos dados como podemos observar abaixo:
+Ao obter uma entropia de *0.0* nos resultados finais da árvore de decisão, gerando a inexistência de valores diferentes de 0 fora da diagonal principal, a matriz de confusão formada trás precisão nos dados como podemos observar abaixo:
 
 ![matriz-confusao.png](https://github.com/camylladias/CC7711/blob/main/aprendizadoIndutivo/img/matriz-confusao.png?raw=true)
 ##  Integrantes 
