@@ -1,19 +1,21 @@
 import numpy as np
 import matplotlib.pyplot as plt
-#import sklearn
 from sklearn.neural_network import MLPRegressor
 
 print('Carregando Arquivo de teste')
-arquivo = np.load('teste3.npy')
+arquivo = np.load('teste5.npy')
 x = arquivo[0]
 y = np.ravel(arquivo[1])
 
 
 
-
+media_exec = [] 
+desvio_padrao_exec = [] 
+iteracoes=1000
+camadas=(10,10)
 
 for i in range(10):
-    regr = MLPRegressor(hidden_layer_sizes=(2),
+    regr = MLPRegressor(hidden_layer_sizes=(10,10),
                         max_iter=1000,
                         activation='relu', #{'identity', 'logistic', 'tanh', 'relu'},
                         solver='adam',
@@ -22,10 +24,11 @@ for i in range(10):
     print('Treinando RNA')
     regr = regr.fit(x,y)
 
-
-
     print('Preditor')
     y_est = regr.predict(x)
+    media_exec.append(np.average(y_est))
+    desvio_padrao_exec.append(np.std(y_est))
+
     plt.figure(figsize=[14,7])
 
     #plot curso original
@@ -41,3 +44,7 @@ for i in range(10):
     plt.plot(x,y,linewidth=1,color='yellow')
     plt.plot(x,y_est,linewidth=2)
     plt.show()
+
+print(f'Média das médias da execução com os parametros max_iter: {iteracoes} setados e o tamanho de camadas: {camadas} é igual a: '" %.2f" %np.average(media_exec))
+print(f'Média dos desvios padrões da execução com os parametros max_iter: {iteracoes} setados e o tamanho de camadas: {camadas} é igual a: '"  %.2f" %np.std(desvio_padrao_exec))
+
