@@ -1,46 +1,95 @@
+
 # Aproximação de RNA - Atividade 4
+
 ##### Disciplina Inteligência Artificial e Robótica - Ciência da Computação FEI
 
-## Base de Dados
-Utilizamos a base de dados ```` que dispõe dos atributos:
+ ## Teste 1
+fazer
 
-## Explicação por arquivo: ``teste2.npy``
+## Teste 2
 
-Não convergiu
-Média das médias da execução com os parametros max_iter: 1000 setados e o tamanho de camadas: 2 é igual a:  3.80
-Média dos desvios padrões da execução com os parametros max_iter: 1000 setados e o tamanho de camadas: 2 é igual a:   0.75
+arquivo `teste3.npy`
 
-Convergiu
-Média das médias da execução com os parametros max_iter: 10000 setados e o tamanho de camadas: 2 é igual a:  7.43
-Média dos desvios padrões da execução com os parametros max_iter: 10000 setados e o tamanho de camadas: 2 é igual a:   0.98
+**Não convergiu**
 
-## Explicação por arquivo: ``teste5.npy``
+Média das médias da execução com os parametros max_iter: 1000 setados e o tamanho de camadas: 2 é igual a: 3.80
 
-Não convergiu
-Média das médias da execução com os parametros max_iter: 1000 setados e o tamanho de camadas: 2 é igual a:  0.73
-Média dos desvios padrões da execução com os parametros max_iter: 1000 setados e o tamanho de camadas: 2 é igual a:   0.72
+Média dos desvios padrões da execução com os parametros max_iter: 1000 setados e o tamanho de camadas: 2 é igual a: 0.75
 
-Não convergiu
-Média das médias da execução com os parametros max_iter: 10000 setados e o tamanho de camadas: 2 é igual a:  2.12
-Média dos desvios padrões da execução com os parametros max_iter: 10000 setados e o tamanho de camadas: 2 é igual a:   5.91
+**Convergiu**
 
-Não convergiu
-Média das médias da execução com os parametros max_iter: 10000 setados e o tamanho de camadas: (3, 3) é igual a:  1.99
-Média dos desvios padrões da execução com os parametros max_iter: 10000 setados e o tamanho de camadas: (3, 3) é igual a:   5.93
+Média das médias da execução com os parametros max_iter: 10000 setados e o tamanho de camadas: 2 é igual a: 7.43
 
-Média das médias da execução com os parametros max_iter: 10000 setados e o tamanho de camadas: (4, 4) é igual a:  2.14
-Média dos desvios padrões da execução com os parametros max_iter: 10000 setados e o tamanho de camadas: (4, 4) é igual a:   6.36
-
-Média das médias da execução com os parametros max_iter: 20000 setados e o tamanho de camadas: (4, 4) é igual a:  3.16
-Média dos desvios padrões da execução com os parametros max_iter: 20000 setados e o tamanho de camadas: (4, 4) é igual a:   5.90
-
-Média das médias da execução com os parametros max_iter: 20000 setados e o tamanho de camadas: (5, 5) é igual a:  3.51
-Média dos desvios padrões da execução com os parametros max_iter: 20000 setados e o tamanho de camadas: (5, 5) é igual a:   3.88
-
-Média das médias da execução com os parametros max_iter: 40000 setados e o tamanho de camadas: (5, 5) é igual a:  3.15
-Média dos desvios padrões da execução com os parametros max_iter: 40000 setados e o tamanho de camadas: (5, 5) é igual a:   5.19
+Média dos desvios padrões da execução com os parametros max_iter: 10000 setados e o tamanho de camadas: 2 é igual a: 0.98
 
 
+## Teste 3
+
+arquivo `teste3.npy`
+
+**execução 1, não convergiu:**
+
+Média das médias da execução com os parametros max_iter: 1000 setados e o tamanho de camadas: (10, 10) é igual a:  -16.55
+
+Média dos desvios padrões da execução com os parametros max_iter: 1000 setados e o tamanho de camadas: (10, 10) é igual a:   1.15
+
+**execução 2, convergiu:**
+
+![teste3-converviu-3.png](https://github.com/camylladias/CC7711/blob/main/RNA/img/teste3-converviu-3.png?raw=true)
+
+Média das médias da execução com os parametros max_iter: 10000 setados e o tamanho de camadas: (10, 10) é igual a:  -17.97
+
+Média dos desvios padrões da execução com os parametros max_iter: 10000 setados e o tamanho de camadas: (10, 10) é igual a:   0.08
+  
+  ## Teste 4
+  fazer
+
+## Teste 5
+
+arquivo `teste5.npy`
+  
+
+**Não convergiu**
+
+Média das médias da execução com os parametros max_iter: 1000 setados e o tamanho de camadas: 2 é igual a: 0.73
+
+Média dos desvios padrões da execução com os parametros max_iter: 1000 setados e o tamanho de camadas: 2 é igual a: 0.72
+
+  
+**Não convergiu**
+
+Média das médias da execução com os parametros max_iter: 10000 setados e o tamanho de camadas: 2 é igual a: 2.12
+
+Média dos desvios padrões da execução com os parametros max_iter: 10000 setados e o tamanho de camadas: 2 é igual a: 5.91
+
+**Não convergiu**
+
+Média das médias da execução com os parametros max_iter: 10000 setados e o tamanho de camadas: (3, 3) é igual a: 1.99
+
+Média dos desvios padrões da execução com os parametros max_iter: 10000 setados e o tamanho de camadas: (3, 3) é igual a: 5.93
+
+  
+Média das médias da execução com os parametros max_iter: 10000 setados e o tamanho de camadas: (4, 4) é igual a: 2.14
+
+Média dos desvios padrões da execução com os parametros max_iter: 10000 setados e o tamanho de camadas: (4, 4) é igual a: 6.36
+
+  
+
+Média das médias da execução com os parametros max_iter: 20000 setados e o tamanho de camadas: (4, 4) é igual a: 3.16
+
+Média dos desvios padrões da execução com os parametros max_iter: 20000 setados e o tamanho de camadas: (4, 4) é igual a: 5.90
+
+  
+
+Média das médias da execução com os parametros max_iter: 20000 setados e o tamanho de camadas: (5, 5) é igual a: 3.51
+
+Média dos desvios padrões da execução com os parametros max_iter: 20000 setados e o tamanho de camadas: (5, 5) é igual a: 3.88
+
+  
+
+Média das médias da execução com os parametros max_iter: 40000 setados e o tamanho de camadas: (5, 5) é igual a: 3.15
+
+Média dos desvios padrões da execução com os parametros max_iter: 40000 setados e o tamanho de camadas: (5, 5) é igual a: 5.19
 
 ##  Integrantes 
 
