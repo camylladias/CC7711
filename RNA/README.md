@@ -4,23 +4,25 @@
 ##### Disciplina Inteligência Artificial e Robótica - Ciência da Computação FEI
 
  ## Teste 1
-fazer
+Exemplo dado em sala.
 
 ## Teste 2
 
-arquivo `teste3.npy`
+arquivo `teste2.npy`
 
-**Não convergiu**
+** execução 1, não convergiu**
 
 Média das médias da execução com os parametros max_iter: 1000 setados e o tamanho de camadas: 2 é igual a: 3.80
 
 Média dos desvios padrões da execução com os parametros max_iter: 1000 setados e o tamanho de camadas: 2 é igual a: 0.75
 
-**Convergiu**
+**execução 2, convergiu**
 
 Média das médias da execução com os parametros max_iter: 10000 setados e o tamanho de camadas: 2 é igual a: 7.43
 
 Média dos desvios padrões da execução com os parametros max_iter: 10000 setados e o tamanho de camadas: 2 é igual a: 0.98
+
+![convergiu2.2.png](https://github.com/camylladias/CC7711/blob/main/RNA/img/convergiu2.2.png?raw=true)
 
 
 ## Teste 3
