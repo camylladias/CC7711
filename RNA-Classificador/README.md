@@ -95,6 +95,10 @@ Matriz confusão 2:
 ![fg2-compca.png](https://github.com/camylladias/CC7711/blob/main/RNA-Classificador/img/fg2-compca.png?raw=true)
 
 ![fg3-compca.png](https://github.com/camylladias/CC7711/blob/main/RNA-Classificador/img/fg3-compca.png?raw=true)
+
+## Conclusão
+
+A com pca é melhor, rodando o mesmo dataset a matriz de confusão indica erros entre a coluna versicolor com a linha virginica e entre a linha versicolor com a coluna virginica, a cada nova iteração os erros não são possuem uma grande discrepância e são sempre nas colunas/linhas citadas, havendo uma acurácia melhor.
 ##  Integrantes 
 
 <div align="center">
