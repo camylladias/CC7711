@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from sklearn.neural_network import MLPRegressor
 
 print('Carregando Arquivo de teste')
-arquivo = np.load('teste3.npy')
+arquivo = np.load('teste4.npy')
 x = arquivo[0]
 y = np.ravel(arquivo[1])
 
