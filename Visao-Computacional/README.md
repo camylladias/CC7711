@@ -116,7 +116,10 @@ for i in  range(len(imagens)):
 	plt.xticks([]),plt.yticks([])
 plt.show()
 ```
+
+
 *Imagens intermediárias:*
+
 **![](https://lh4.googleusercontent.com/LX7rcW_szs1RpHo0CtvAhFhEKwM8i1pW4vgVdao5WwTzxgT-oQ0H_D11CHcqNjaiAYTwDjFMscMNenVFyWT5Lv4Pt4GTMAKLE34-54WX_ssu1W-74Okk39YWN7jF6TIlfZEcpwNmG4Ox1WoBQFUNT3g)**
 
 *Imagem final:*
