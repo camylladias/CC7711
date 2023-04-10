@@ -74,7 +74,7 @@ import cv2
 import matplotlib.pyplot as plt
 
 #Importa e converta para RGB
-img = cv2.imread('./AVIAO_01.jpg')
+img = cv2.imread('./imagens/AVIAO_01.jpg')
 img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
   
 #Convertendo para preto e branco (RGB -> Gray Scale -> BW)
