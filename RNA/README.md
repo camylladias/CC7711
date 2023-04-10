@@ -43,8 +43,14 @@ Média das médias da execução com os parametros max_iter: 10000 setados e o t
 
 Média dos desvios padrões da execução com os parametros max_iter: 10000 setados e o tamanho de camadas: (10, 10) é igual a:   0.08
   
-  ## Teste 4
-  fazer
+## Teste 4
+
+**execução 1, não convergiu:**
+Média das médias da execução com os parametros max_iter: 10000 setados e o tamanho de camadas: (10, 10) é igual a:  18.36
+Média dos desvios padrões da execução com os parametros max_iter: 10000 setados e o tamanho de camadas: (10, 10) é igual a:   20.27
+
+**execução 2,3,4,5 não convergiu:**
+ConvergenceWarning: Stochastic Optimizer: Maximum iterations (10000) reached and the optimization hasn't converged yet.
 
 ## Teste 5
 
