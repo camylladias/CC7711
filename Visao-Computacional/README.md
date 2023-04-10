@@ -62,6 +62,7 @@ plt.show()
 **![](https://lh6.googleusercontent.com/WTIGIp3PL4-cm7Ml4aCfs0HgVA0OPPUCZkhRy0sQRi7dGjPtVQ1MSGY-FeTWd2bdK43M8kQcFsU14AZfqmUzj0m8VTvb46Erl2z3MC2k5PxFCYPVI6s-td0jum82pTe2aMEd6kLPigcOSMBDNrcd9g)**
 
 *Imagem final:*
+
 **![](https://lh5.googleusercontent.com/ayOK1QPiPdMUl1M9SGad_H_5b-uur_FO9M7exYcNNsTwIKlSzJNp7o6jq9olkRqgXyfijSxcBz6Lrmwdesoy9Lf1OTEICRzDUsWVStqFUbUat6HY6sCO3gcdET6INRq-LrKvfV904pygTiEXoYVnsEQ)**
 
 ## Imagem Avião
@@ -119,4 +120,5 @@ plt.show()
 **![](https://lh4.googleusercontent.com/LX7rcW_szs1RpHo0CtvAhFhEKwM8i1pW4vgVdao5WwTzxgT-oQ0H_D11CHcqNjaiAYTwDjFMscMNenVFyWT5Lv4Pt4GTMAKLE34-54WX_ssu1W-74Okk39YWN7jF6TIlfZEcpwNmG4Ox1WoBQFUNT3g)**
 
 *Imagem final:*
+
 **![](https://lh5.googleusercontent.com/ZSPk42jq4T9djwQLrpswdKImt9iUmUO7_QnmX-bilTfF9ooFI7udARg4L6PVoT4KPAaOKV9b04ob59QqGDyhw8iqmlthlRwfL2CiuZaEnmdFn4IkDtVGmoM-9kQhG_0wfYv_3Ex3QdV92YBUKlgf74M)**
