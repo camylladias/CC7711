@@ -3,7 +3,7 @@
 # Projeto Robótica
 **Objetivo:** Encontrar a caixa de madeira "leve"
 1.  O robô deve encontrar a caixa leve e parar de procurar
-2.  Quando encontrar, ele deve parar e acender os leda
+2.  Quando encontrar, ele deve parar e acender os leds
 
 ##  1. Integrantes
 
