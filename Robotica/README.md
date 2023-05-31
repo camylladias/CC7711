@@ -19,3 +19,4 @@ https://github.com/camylladias/CC7711/assets/37374749/386f789a-bf0d-4c1f-a4f1-9d
 ###### [Projeto de Robótica Lab - Disciplina CC7711](https://www.youtube.com/watch?v=VWcqXf4DKC0)
 
 ##  3. Código Fonte
+[controllerfinal.c](https://github.com/camylladias/CC7711/blob/main/Robotica/controllers/controllerfinal/controllerfinal.c)
