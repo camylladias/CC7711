@@ -1,0 +1,78 @@
+#VRML_SIM R2023a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/floors/protos/CircleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/factory/containers/protos/WoodenBox.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.1748425627331293 0.8689647543800815 0.46295824207165437 0.8197372723525413
+  position -1.138584087427971 -0.2587603878666349 1.0850840628530167
+}
+Background {
+  skyColor [
+    0.4 0.7 1
+  ]
+}
+DirectionalLight {
+  ambientIntensity 1
+  direction 0.1 -0.5 0.3
+}
+CircleArena {
+  radius 0.6
+}
+E-puck {
+  hidden position_0_0 1710.8431708532817
+  hidden position_0_1 2385.948106950427
+  hidden rotation_1 0 1 0 1.8167673004341411
+  hidden rotation_2 0 -1 0 1.6623097778160705
+  translation 0.3267878463380729 0.21987725968662777 -4.197901125265434e-05
+  rotation 0.0020629503049534787 0.00038662195540460734 0.9999977973773257 -2.5823064451182955
+  controller "controllerfinal"
+  controllerArgs [
+    ""
+  ]
+  supervisor TRUE
+}
+DEF CAIXA WoodenBox {
+  translation 0.497400929556131 0.18678622150560378 0.039988228
+  rotation -4.957538804878285e-16 -2.8897971568561983e-16 1 0.3402688716213688
+  size 0.08 0.08 0.08
+  mass 0.03
+}
+WoodenBox {
+  translation 0 0.5 0.04
+  name "wooden box(1)"
+  size 0.08 0.08 0.08
+}
+WoodenBox {
+  translation 0 -0.5 0.04
+  name "wooden box(2)"
+  size 0.08 0.08 0.08
+}
+WoodenBox {
+  translation 0 0 0.04
+  name "wooden box(3)"
+  size 0.08 0.08 0.08
+}
+WoodenBox {
+  translation 0.25 0 0.04
+  name "wooden box(4)"
+  size 0.08 0.08 0.08
+}
+WoodenBox {
+  translation -0.25 0 0.04
+  name "wooden box(5)"
+  size 0.08 0.08 0.08
+}
+WoodenBox {
+  translation -0.25 -0.25 0.04
+  name "wooden box(6)"
+  size 0.08 0.08 0.08
+}
+WoodenBox {
+  translation 0.25 0.25 0.04
+  name "wooden box(7)"
+  size 0.08 0.08 0.08
+}
