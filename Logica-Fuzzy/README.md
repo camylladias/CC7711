@@ -101,47 +101,127 @@ peso.view(sim=calculoPeso)
 plt.show()
 ```
 ## Saídas para diferentes tipos de função de pertinência
+Para avaliar as diferenças das diferentes funções de pertinência demos as mesmas entradas, `calorias = 5` e tempo de `atividade = 5`, para monitorar a diferença entre as saídas em cada formato de gráfico.
 
 **Triangular:**
+```python
+calorias 5 
+Tempo de de atividade 5 
+peso de  5.26
+```
+Peso:
+![pesoTriangulo.png](https://github.com/camylladias/CC7711/blob/main/Logica-Fuzzy/img/Prints/Sa%C3%ADdas%20em%20diferentes%20pertinencias/pesoTriangulo.png?raw=true)
 
 **Gaussiana:**
+```python
+calorias 5 
+Tempo de de atividade 5 
+peso de  4.48
+```
+Tempo de atividade com valor de entrada = 5
+![TAtividade5.png](https://github.com/camylladias/CC7711/blob/main/Logica-Fuzzy/img/Prints/Sa%C3%ADdas%20em%20diferentes%20pertinencias/TAtividade5.png?raw=true)
+
+Peso:
+![pesoGauss.png](https://github.com/camylladias/CC7711/blob/main/Logica-Fuzzy/img/Prints/Sa%C3%ADdas%20em%20diferentes%20pertinencias/pesoGauss.png?raw=true)
 
 **Trapezoidal:**
+```python
+calorias 5 
+Tempo de de atividade 5 
+peso de  5.10
+```
+Caloria com valor de entrada = 5
+![Caloria5.png](https://github.com/camylladias/CC7711/blob/main/Logica-Fuzzy/img/Prints/Sa%C3%ADdas%20em%20diferentes%20pertinencias/Caloria5.png?raw=true)
 
-
+Peso
+![pesoTrapezio.png](https://github.com/camylladias/CC7711/blob/main/Logica-Fuzzy/img/Prints/Sa%C3%ADdas%20em%20diferentes%20pertinencias/pesoTrapezio.png?raw=true)
 ## Análise de sensibilidade entre as variáveis de entrada e de saída
 *Explorando os valores limites de entrada e saída:*
 
 **A menor entrada/saída:**
-Para analisar o menor peso que podemos atingir, adicionamos o menor tempo de atividade e o menor consumo de calorias: ambos em zero (de acordo com a escala). Como no exemplo a seguir:
-[imagem]
+Para analisar o menor peso que podemos atingir, adicionamos o menor tempo de atividade e o menor consumo de calorias: ambos em zero (de acordo com a escala). Como nas imagens a seguir:
+
+1. tempo de atividade mínima ![TAtividadesMin.png](https://github.com/camylladias/CC7711/blob/main/Logica-Fuzzy/img/Prints/Analise%20de%20sensibilidade/Minimo/TAtividadesMin.png?raw=true)
+
+2. calorias mínimas
+![CaloriasMin.png](https://github.com/camylladias/CC7711/blob/main/Logica-Fuzzy/img/Prints/Analise%20de%20sensibilidade/Minimo/CaloriasMin.png?raw=true)
+
+3. peso
+![PesoMin.png](https://github.com/camylladias/CC7711/blob/main/Logica-Fuzzy/img/Prints/Analise%20de%20sensibilidade/Minimo/PesoMin.png?raw=true)
+
+ **Resultado:**
+```python
+calorias 0 
+Tempo de de atividade 0 
+peso de  1.63
+```
 
 **A maior saída:**
 Para analisar a maior saída que podemos atingir, adicionamos o menor tempo de atividade e o maior consumo de calorias. Como no exemplo a seguir:
-[imagem]
+1. atividade mínima
+![AtividadeMin.png](https://github.com/camylladias/CC7711/blob/main/Logica-Fuzzy/img/Prints/Analise%20de%20sensibilidade/M%C3%A1ximoSaida/AtividadeMin.png?raw=true)
 
+2. calorias máximo
+![CaloriasMax.png](https://github.com/camylladias/CC7711/blob/main/Logica-Fuzzy/img/Prints/Analise%20de%20sensibilidade/M%C3%A1ximoSaida/CaloriasMax.png?raw=true)
+
+3. peso máx![PesoMax.png](https://github.com/camylladias/CC7711/blob/main/Logica-Fuzzy/img/Prints/Analise%20de%20sensibilidade/M%C3%A1ximoSaida/PesoMax.png?raw=true)
+
+**Resultado (gaussiana):**
+```python
+Entradas :
+Calorias 10
+Atividade 0
+
+Saída  peso 8.28
+```
 **A maior entrada:**
 Para analisar o *peso* para as maiores entradas que podemos atingir, adicionamos maior tempo de atividade e maior consumo de calorias: ambos em 10 (de acordo com a escala). Como no exemplo a seguir:
-[imagem]
+1. tempo de atividade máximo
+![TAtividadeMax.png](https://github.com/camylladias/CC7711/blob/main/Logica-Fuzzy/img/Prints/Analise%20de%20sensibilidade/MaximoEntrada/TAtividadeMax.png?raw=true)
 
+2. calorias máximo ![CaloriasMax.png](https://github.com/camylladias/CC7711/blob/main/Logica-Fuzzy/img/Prints/Analise%20de%20sensibilidade/MaximoEntrada/CaloriasMax.png?raw=true)
+
+3. peso ![pesoMed.png](https://github.com/camylladias/CC7711/blob/main/Logica-Fuzzy/img/Prints/Analise%20de%20sensibilidade/MaximoEntrada/pesoMed.png?raw=true) 
+
+**Resultado:**
+```python
+calorias 10 
+Tempo de de atividade 10 
+peso de  6.70
+```
 ## Nova variável de entrada e regras
 Adicionamos a variável `tAtividade` (tempo de atividade)
-
+```python
     TAtividade['pouco'] 
     TAtividade['razoavel'] 
     TAtividade['bastante']
-
+```
 Conjunto das regras:
-[imagem]
+![Regras.jpg](https://github.com/camylladias/CC7711/blob/main/Logica-Fuzzy/img/Prints/Regras.jpg?raw=true)
 
-## Comparação entre os modelos (triangular, gaussiana, trapezoidal)
+## Comparação entre os modelos (triangular, gaussiana, trapezoidal) em relação ao peso
 
 **Triangular:**
 
+![pesoTriangular.jpg](https://github.com/camylladias/CC7711/blob/main/Logica-Fuzzy/img/Prints/Compara%C3%A7%C3%A3o%20entre%20modelos/pesoTriangular.jpg?raw=true)
+
 **Gaussiana:**
 
+![pesoGaussiana.jpg](https://github.com/camylladias/CC7711/blob/main/Logica-Fuzzy/img/Prints/Compara%C3%A7%C3%A3o%20entre%20modelos/pesoGaussiana.jpg?raw=true)
+
 **Trapezoidal:**
+
+![pesoTrapezio.jpg](https://github.com/camylladias/CC7711/blob/main/Logica-Fuzzy/img/Prints/Compara%C3%A7%C3%A3o%20entre%20modelos/pesoTrapezio.jpg?raw=true)
+
 ## Como foi a experiência?
+
+Criar um sistema de classificação de obesidade baseado em tempo de atividade, calorias ingeridas e com a saída de peso usando lógica fuzzy e os algoritmos trapezoidal, gaussiano e triangular foi uma experiência interessante. Definir conjuntos fuzzy, explorar diferentes algoritmos e técnicas, lidar com incerteza e imprecisão dos dados e ajustar as regras de inferência foram etapas um pouco mais trabalhosas. Os algoritmos trapezoidal, gaussiano e triangular trouxeram vantagens específicas em termos de precisão, suavidade ou simplicidade. No final, o sistema ofereceu classificações intuitivas para a detecção de obesidade.
+
+Ao utilizar o algoritmo trapezoidal, percebemos como os intervalos trapezoidais permitiram uma modelagem precisa dos conjuntos fuzzy, especialmente quando havia inclinações ou faixas específicas de classificação de obesidade.
+
+No entanto, o algoritmo gaussiano trouxe uma suavidade e transição gradual entre os conjuntos fuzzy, o que tornou a interpretação dos resultados mais intuitiva. Através das curvas de sino suaves, capturamos as incertezas graduais.
+
+Por outro lado, o algoritmo triangular ofereceu uma simplicidade na implementação e compreensão. Com funções triangulares, conseguimos resultados diretos e facilmente interpretáveis. Embora tenha suas limitações, especialmente quando se trata de modelar transições abruptas, foi uma alternativa útil em alguns casos.
 
 ## Outro exemplo de aplicação da Lógica Fuzzy
 
