@@ -1,4 +1,3 @@
-
 /*
  * Copyright 1996-2021 Cyberbotics Ltd.
  *
@@ -194,7 +193,7 @@ static void run_braitenberg() {
       break;
     }
   }
-    
+   
 }
 
 static void go_backwards() {
@@ -221,11 +220,11 @@ reset_actuator_values();
 WbNodeRef robotNode = wb_supervisor_node_get_from_def("CAIXA");
 const double *position_ini = wb_supervisor_node_get_position(robotNode);
 printf("Posição do robô fora: (%g, %g, %g)\n", position_ini[0], position_ini[1], position_ini[2]);
-
+const double teste=position_ini[0];
 double epsilon = 0.000500;
 double n1 = 2.17292e-311;
 double n2=8.69169e-311;
-char s1[12]; 
+char s1[12];
 char s2[12];
 bool controle=0;    
 while (true) {
@@ -234,29 +233,27 @@ while (true) {
   double *position_running = wb_supervisor_node_get_position(boxtNode);
   //printf("Posição do robô dentro: (%g, %g, %g)\n", position_running[0], position_running[1], position_running[2]);
   sprintf(s1, "%f", position_ini[0]);
-  sprintf(s2, "%f", position_ini[0]); 
+  sprintf(s2, "%f", position_ini[0]);
   int r1 = strcmp(s1, "0.000000");
   int r2 = strcmp(s2, "0.000000");
  
-  if  ((r1==0|| r2==0) &&(controle==0)){
-     run_braitenberg();
-  }
- else if  ((fabs(position_ini[0] - position_running[0]) < epsilon)&&(controle==0)){
-    printf("%d %g %g \n ",r1,position_running[0], position_ini[0]);
+  
+ if  ((fabs(teste- position_running[0]) < epsilon)){
+    printf("%g %g \n ",teste, position_ini[0]);
      run_braitenberg();
 
   }else{
-  
+ 
   printf("aqui");
     controle=1;
     blink_leds();
     //printf("bateu \n");
     speeds[LEFT] = 0;
     speeds[RIGHT] = 0;
-    
+   
      
   }
-  
+ 
   /*if (position_running[0] == position_ini[0]){
     run_braitenberg();
   }
@@ -270,4 +267,5 @@ while (true) {
 
 return EXIT_SUCCESS;
 }
+
 
