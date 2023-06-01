@@ -1,0 +1,8 @@
+Gaussiana
+
+Entradas :
+Calorias 10
+Atividade 0
+
+Saída  peso 8.28
+

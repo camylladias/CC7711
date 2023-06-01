@@ -1,0 +1,3 @@
+calorias 10 
+Tempo de de atividade 10 
+peso de  6.70

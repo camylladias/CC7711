@@ -1,0 +1,19 @@
+Para avaliar as diferenças das diferentes funções de pertinencia colocamos as mesmas entradas, calorias 5 e tempo de atividade 5, para monitorar a diferença entre as saídas em cada formato de gráfico.
+
+Gaussiana:
+
+calorias 5 
+Tempo de de atividade 5 
+peso de  4.48
+
+Triangular:
+
+calorias 5 
+Tempo de de atividade 5 
+peso de  5.26
+
+Trapezoidal:
+
+calorias 5 
+Tempo de de atividade 5 
+peso de  5.10
