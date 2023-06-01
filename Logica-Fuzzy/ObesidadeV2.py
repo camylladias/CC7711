@@ -36,15 +36,15 @@ peso['peso pesado'] = fuzz.gaussmf(peso.universe, 10,1)
 
 '''
 #triangulo
-peso['peso pena'] = fuzz.trimf(peso.universe, 1, 4,6)
-peso['peso medio'] = fuzz.trimf(peso.universe, 4, 7, 10)
-peso['peso pesado'] = fuzz.trimf(peso.universe, 8, 10,11)
-'''
-'''
+peso['peso pena'] = fuzz.trimf(peso.universe, [1, 4,6])
+peso['peso medio'] = fuzz.trimf(peso.universe, [4, 7, 10])
+peso['peso pesado'] = fuzz.trimf(peso.universe, [8, 10,11])
+
+
 #trapesio
-peso['peso pena'] = fuzz.trapmf(peso.universe, 1,3,4,6)
-peso['peso medio'] = fuzz.trapmf(peso.universe, 4, 6, 8, 10)
-peso['peso pesado'] = fuzz.trapmf(peso.universe, 8, 9, 10,11)
+peso['peso pena'] = fuzz.trapmf(peso.universe, [1,3,4,6])
+peso['peso medio'] = fuzz.trapmf(peso.universe, [4, 6, 8, 10])
+peso['peso pesado'] = fuzz.trapmf(peso.universe, [8, 9, 10,11])
 '''
 #Visualizando as variáveis
 calorias.view()
@@ -52,34 +52,35 @@ TAtividade.view()
 peso.view()
 
 #Criando as regras
-regra_1 = ctrl.Rule(calorias['pouco'] and (TAtividade['pouco'] or TAtividade['razoavel']), peso['peso pena'])
-regra_2 = ctrl.Rule(calorias['pouco'] and TAtividade['bastante'], peso['peso medio'])
-regra_3 = ctrl.Rule(calorias['razoavel'] and (TAtividade['razoavel'] or TAtividade['bastante']), peso['peso pena'])
-regra_4 = ctrl.Rule(calorias['razoavel'] and TAtividade['pouco'], peso['peso medio'])
-regra_5 = ctrl.Rule(calorias['bastante'] and TAtividade['pouco'], peso['peso pesado'])
-regra_6 = ctrl.Rule(calorias['bastante'] and (TAtividade['razoavel']or TAtividade['bastante']), peso['peso medio'])
+regra_1 = ctrl.Rule(calorias['pouco'] & (TAtividade['pouco'] | TAtividade['razoavel']), peso['peso pena'])
+regra_2 = ctrl.Rule(calorias['pouco'] & TAtividade['bastante'], peso['peso medio'])
+regra_3 = ctrl.Rule(calorias['razoavel'] & (TAtividade['razoavel'] | TAtividade['bastante']), peso['peso pena'])
+regra_4 = ctrl.Rule(calorias['razoavel'] & TAtividade['pouco'], peso['peso medio'])
+regra_5 = ctrl.Rule(calorias['bastante'] & TAtividade['pouco'], peso['peso pesado'])
+regra_6 = ctrl.Rule(calorias['bastante'] & (TAtividade['razoavel']| TAtividade['bastante']), peso['peso medio'])
 
 
 controlador = ctrl.ControlSystem([regra_1, regra_2, regra_3,regra_4,regra_5,regra_6])
 
 #Simulando
-Calculopeso = ctrl.ControlSystemSimulation(controlador)
+calculoPeso = ctrl.ControlSystemSimulation(controlador)
 
-notacalorias = int(input('calorias: '))
-Calculopeso.input['calorias'] = notacalorias
+notaCalorias =int(input("calorias: "))
+calculoPeso.input['calorias'] =notaCalorias
 notaAtv = int(input('Tempo de atividade: '))
-Calculopeso.input['TAtividade'] = notaAtv
-Calculopeso.compute()
+calculoPeso.input['TAtividade'] = notaAtv
+calculoPeso.compute()
 
-valorpeso = Calculopeso.output['peso']
+valorpeso = calculoPeso.output['peso']
 
-print("\ncalorias %d \nServiço %d \npeso de %5.2f" %(
-        notacalorias,
+print("\ncalorias %d \nTempo de de atividade %d \npeso de %5.2f" %(
+        notaCalorias,
+        notaAtv,
         valorpeso))
 
 
-calorias.view(sim=Calculopeso)
-TAtividade.view(sim=Calculopeso)
-peso.view(sim=Calculopeso)
+calorias.view(sim=calculoPeso)
+TAtividade.view(sim=calculoPeso)
+peso.view(sim=calculoPeso)
 
 plt.show()
